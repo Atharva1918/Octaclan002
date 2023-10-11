@@ -1,0 +1,930 @@
+*{
+    
+
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "poppins", sans-serif;
+      
+
+    
+
+        
+      
+}
+
+body{
+        background-color: #1c1c1c
+}
+
+
+html {
+
+        scroll-behavior: smooth;
+}
+
+
+#container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #1c1c1c;
+        
+     }
+     #loading{
+       width: 200px;
+       height: 200px;
+       position: relative;
+       
+       border-radius: 50%;
+       border-top: 1opx solid #45f3ff;
+       animation: animate 2s linear infinite;
+     }
+     @keyframes animate{
+       0%{
+         transform:rotate(0deg) ;
+       }
+       100%{
+        transform:rotate(360deg) ;
+      }
+     }
+     #loading::after{
+       transform: rotate(120deg);
+       border-top: 10px solid  #45f3ff;
+     }
+     #loading::before{
+       transform: rotate(240deg);
+       border-top: 10px solid  #45f3ff;
+     }
+     #loading::after,
+     #loading::before{
+       content: '';
+       top: -10px;
+       left: 0;
+       width: 200px;
+       height: 200px;
+       position: absolute;
+       border-radius: 50%;
+     }
+     #loading span{
+       position: absolute;
+       width: 200px;
+       height: 200px;
+       text-align: center;
+       line-height: 200px;
+       color: #fff;
+       animation: a2 2s linear infinite;
+     }
+    
+     @keyframes a2{
+        to{
+         transform:rotate(-360deg) ;
+       }
+    }
+.nav{
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 2rem 6.5rem;
+        background: #222;
+        z-index: 100000;
+}
+
+.nav h2{
+        color: #45f3ff;
+        font-size: 3rem;
+        font-family: 'Orbitron', sans-serif;
+
+}
+#item{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+}
+#item li{
+        list-style: none;
+        padding-right: 50px;
+}
+#item li a{
+        text-decoration: none;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: white;
+}
+
+#bar{
+        color: #45f3ff;
+        font-weight: lighter;
+        font-size: 1.5rem;
+        display: none;
+}
+
+
+#item li a:hover{
+        color: #45f3ff;
+        cursor: pointer;
+}
+
+.mid{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+
+}
+.mid p{
+        color: white;
+        font-size:2.6rem;
+        margin-bottom: 1.4rem;
+}
+.mid p b{
+        color: #45f3ff;
+}
+.mid h2{
+        color: white;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+}
+.mid .btn a{
+        text-decoration: none;
+        text-transform: uppercase;
+}
+.mid .btn a.border{
+        color: #45f3ff;
+        font-weight: 500;
+        padding: 0.9rem 1.6rem;
+        border: 1px solid #45f3ff;
+        border-radius: 3px;
+}
+.mid .btn a.border:hover{
+        color: #1c1c1c;
+        background-color: #45f3ff;
+}
+
+.details{
+      width: 100%;
+      
+      justify-content: center;
+      align-items: center;
+      padding-top: 45%;
+
+     
+}
+.details .one h3{
+
+        color: #45f3ff;
+        font-size: 3rem;
+        padding-right: 90%;
+        border: 1px soild #45f3ff;
+        border-radius: 3px;
+        margin: 10px;
+        
+        padding: 10PX;
+        padding-left: 220PX;
+}
+.details .one h6{
+        color: white;
+        font-size: 2rem;
+        margin: 10px;
+        padding-left: 15%;
+        word-spacing: 8px;
+        font-family: "Gill sans",sans-serif;
+        font-weight: 100;
+        
+        margin-bottom: 5%;
+}
+
+.one a{
+        color:black;
+        font-weight: 500;
+        padding: 0.9rem 1.6rem;
+        border: 1px solid #45f3ff;
+        background-color: #45f3ff;
+        border-radius: 3px;
+        text-decoration: none;
+        margin: 20px;
+        margin-left:15%;
+      
+
+}
+
+.one a:hover{
+background-color: #fff;
+color: #1c1c1c;
+}
+
+.trainer{
+        background-color: #1c1c1c;
+        padding: 12rem;
+
+}
+.team h2{
+        color: #45f3ff;
+        font-size: 3rem;
+        padding-right: 90%;
+        border: 1px soild #45f3ff;
+        border-radius: 3px;
+        margin: 10px;
+        padding: 10px;
+
+}
+.team p{
+        color: white;
+        font-size: 2rem;
+        margin: 10px;
+        padding-left: 5px;
+        word-spacing: 8px;
+        font-family: "Gill sans",sans-serif;
+        font-weight: 100;
+        margin-bottom: 5%;
+}
+.team a{
+        color:black;
+        font-size: 1rem;
+        padding-right: 90%;
+        border: 1px soild #45f3ff;
+        background-color: #45f3ff;
+        border-radius: 3px;
+        margin: 10px;
+        padding: 20px;
+        text-decoration: none;
+        font-weight: 500;
+        cursor: pointer;
+
+}
+
+.team a:hover{
+
+background-color: #fff;
+color: #1c1c1c;
+}
+.contact{
+
+        background-color: #1c1c1c;
+        padding: 8rem;
+}
+
+.contact p{
+        color: white;
+        font-size: 3rem;
+        margin: 10px;
+        padding-left: 5px;
+        word-spacing: 8px;
+        font-family: "Gill sans",sans-serif;
+        font-weight: 100;
+        margin-bottom: 5%;
+        text-align: center;
+
+}
+
+.contact a{
+        color:black;
+        font-size: 1rem;
+
+        border: 1px soild #45f3ff;
+        background-color: #45f3ff;
+        border-radius: 3px;
+        margin: 10px;
+        padding: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 46%;
+        cursor: pointer;
+
+}
+
+.contact a:hover{
+
+        background-color: #fff;
+        color: #1c1c1c;
+}
+footer{
+        padding: 10px;
+        padding-left: 40%;
+        text-decoration: none;
+      }
+      footer p{
+        color: #fff;
+        text-decoration: none;
+      }
+
+.contacts {
+        padding: 15px 15px;
+        padding-left: 28%;
+        margin: 20px;
+
+
+}
+.contacts a{
+        padding: 10px 20px ;
+        margin: 5px 15px;
+        text-decoration: none;
+        font-size: 25PX;
+        color: #45f3ff;
+        
+        cursor: pointer;
+}
+
+.contacts a:hover{
+
+        color: #fff;
+}
+.contacts a i{
+        margin: 7px;
+}
+
+
+@media screen and (max-width:1042px){
+
+
+        .nav{
+               
+                padding: 1rem 4.5rem;
+               
+        }
+        
+        .nav h2{
+                
+                font-size: 1.4rem;
+        
+        }
+       
+        #item li{
+               
+                padding-right: 30px;
+        }
+        #item li a{
+               
+                font-size: 0.9rem;
+             
+        }
+
+}
+
+@media screen and (max-width:991px){
+
+
+
+        .nav{
+               
+                padding: 2rem 3rem;
+              
+        }
+        
+        .nav h2{
+              
+                font-size: 2rem;
+        
+        }
+        #item{
+               
+                flex-direction: column;
+                text-align: center;
+                width: 300px;
+                height: 80vh;
+                position: fixed;
+                top: 0;
+                right: -300px;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: 100000;
+                margin-top: 4.2rem;
+                transition: 0.5s;
+             
+        }
+        #item li{
+               
+                padding-right: 0px;
+                padding: 10px 0;
+        }
+        #item li a{
+            
+                font-size: 1.4rem;
+              
+        }
+        
+        #bar{
+               
+                display: initial;
+                cursor: pointer;
+        }
+       
+        .mid p{
+             
+                font-size:2.5rem;
+                margin-bottom: 1.1rem;
+        }
+       
+        .mid h2{
+              
+                font-size: 3.5rem;
+                margin-bottom: 1.8rem;
+        }
+        .mid .btn a.border{
+                 font-size: 0.9rem;
+                padding: 0.7rem 1.4rem;
+        }
+
+        .details{
+               
+                padding-top: 98%;
+          
+               
+          }
+          .details .one h3{
+          
+                  font-size: 2.3rem;
+                  padding-right: 90%;
+               
+                  margin: 10px;
+                  
+                  padding: 10PX;
+                  padding-left: 100PX;
+          }
+          .details .one h6{
+               
+                  font-size: 1.6rem;
+                  margin: 10px;
+                  padding-left: 13%;
+                 
+                  
+                  margin-bottom: 5%;
+          }
+          
+          .one a{
+                  
+               
+                  padding: 0.8rem 1.4rem;
+                
+                  margin: 20px;
+                  margin-left:13%;
+                
+          
+          }
+
+
+          .trainer{
+                background-color: #1c1c1c;
+                padding: 8rem;
+        
+        }
+        .team h2{
+               
+                font-size: 2.5rem;
+                padding-right: 90%;
+              
+                margin: 10px;
+                padding: 10px;
+        
+        }
+        .team p{
+              
+                font-size: 1.8rem;
+                margin: 10px;
+          
+                margin-bottom: 10%;
+        }
+        .team a{
+               
+                font-size: 1rem;
+               
+             
+        
+        }
+
+        .contact{
+
+                padding: 7rem;
+        }
+        
+        .contact p{
+                
+                font-size: 2.3rem;
+                margin-bottom: 13%;
+                
+        
+        }
+        
+        .contact a{
+               
+                font-size: 0.9rem;
+        
+                margin-top: 15px;
+                margin-left: 40%;
+              
+        
+        }
+        .contacts {
+                padding: 10px 10px;
+                padding-left: 10%;
+                font-size: 0.5rem;
+        
+        
+        }
+        
+                
+               
+        .contacts a i{
+                margin: 7px;
+        }
+
+
+        footer{
+               
+                padding-left: 30%;
+                
+              }
+        
+
+}
+
+
+@media screen and (max-width:768px){
+
+        
+       
+        
+        .nav h2{
+              
+                font-size: 2rem;
+        
+        }
+        
+        .mid p{
+             
+                font-size:2rem;
+                margin-bottom: 1.1rem;
+        }
+       
+        .mid h2{
+              
+                font-size: 3rem;
+                margin-bottom: 1.8rem;
+        }
+        .mid .btn a.border{
+                 font-size: 0.9rem;
+                padding: 0.7rem 1.4rem;
+        }
+
+        .details{
+               
+                padding-top: 115%;
+          
+               
+          }
+          .details .one h3{
+          
+                  font-size: 2.2rem;
+                  padding-right: 90%;
+               
+                  margin: 10px;
+                  
+                  padding: 10PX;
+                  padding-left: 80PX;
+          }
+          .details .one h6{
+               
+                  font-size: 1.3rem;
+                  margin: 10px;
+                  padding-left: 11%;
+                 
+                  
+                  margin-bottom: 5%;
+          }
+          
+          .one a{
+                  
+               
+                  padding: 0.8rem 1.4rem;
+                
+                  margin: 20px;
+                  margin-left:11%;
+                
+          
+          }
+
+
+          .trainer{
+                background-color: #1c1c1c;
+                padding: 6rem;
+        
+        }
+        .team h2{
+               
+                font-size: 2.5rem;
+                padding-right: 85%;
+              
+                margin: 10px;
+                padding: 10px;
+        
+        }
+        .team p{
+              
+                font-size: 1.6rem;
+                margin: 10px;
+          
+                margin-bottom: 10%;
+        }
+        .team a{
+               
+                font-size: 1rem;
+               
+             
+        
+        }
+
+        .contact{
+
+                padding: 7rem;
+        }
+        
+        .contact p{
+                
+                font-size: 2rem;
+                margin-bottom: 13%;
+                
+        
+        }
+        
+        .contact a{
+               
+                font-size: 0.9rem;
+        
+                margin-top: 15px;
+                margin-left: 40%;
+              
+        
+        }
+        .contacts {
+                padding: 8px 8px;
+                padding-left: 8%;
+                font-size: 5px;
+        
+        
+        }
+        .contacts a{
+                padding: 10px 10px ;
+                margin: 5px 10px;
+               
+              
+        }
+        
+                
+               
+        .contacts a i{
+                margin: 7px;
+        }
+
+
+        footer{
+               
+                padding-left: 23%;
+                
+              }
+        
+
+}
+
+@media screen and (max-width:480px){
+
+        .nav h2{
+              
+                font-size: 2rem;
+        
+        }
+        
+        .mid p{
+             
+                font-size:2rem;
+                margin-bottom: 1.1rem;
+        }
+       
+        .mid h2{
+              
+                font-size: 3rem;
+                margin-bottom: 1.8rem;
+        }
+        .mid .btn a.border{
+                 font-size: 0.9rem;
+                padding: 0.8rem 1.5rem;
+        }
+
+        .details{
+               
+                padding-top: 190%;
+
+          
+               
+          }
+          .details .one h3{
+          
+                  font-size: 2.3rem;
+                  padding-right: 90%;
+               
+                  margin: 10px;
+                  
+                  padding: 10PX;
+                  padding-left: 40PX;
+          }
+          .details .one h6{
+               
+                  font-size: 1.4rem;
+                  margin: 10px;
+                  padding-left: 9%;
+                 
+                  
+                  margin-bottom: 12%;
+          }
+          
+          .one a{
+                  
+               
+                  padding: 0.8rem 1.4rem;
+                
+                  margin: 20px;
+                  margin-left:9%;
+                
+          
+          }
+
+
+          .trainer{
+                background-color: #1c1c1c;
+                padding: 3rem;
+                padding-top: 10rem;
+                padding-bottom: 9rem;
+        
+        }
+        .team h2{
+               
+                font-size: 2.6rem;
+                padding-right: 85%;
+                margin-right: 90%;
+                margin: 10px;
+                padding: 10px;
+                padding-left: 0%;
+        
+        }
+        .team p{
+              
+                font-size: 1.5rem;
+                margin: 10px;
+          
+                margin-bottom: 15%;
+        }
+        .team a{
+               
+                font-size: 1rem;
+               
+             
+        
+        }
+
+        .contact{
+
+            
+                padding-top: 4rem;
+        }
+        
+        .contact p{
+                
+                font-size: 26px;
+                margin-bottom: 25%;
+                word-spacing: 8px;
+            
+                
+        
+        }
+        
+        .contact a{
+               
+                font-size: 18px;
+        
+                margin-top: 30px;
+                margin-left: 5%;
+              
+        
+        }
+        .contacts {
+                padding: 6px 6px;
+                padding-left: 4%;
+                font-size: 3px;
+        
+        
+        }
+        .contacts a{
+                padding: 2px 2px ;
+                margin: 2px 2px;
+               
+              
+        }
+
+        .contacts .gmail { 
+
+                     margin-left: 50%;
+
+        }
+        .contacts #gma{
+                margin-left: 32%;
+                margin-top: 15px;
+        }
+                
+               
+        .contacts a i{
+                margin: 7px;
+        }
+
+
+        footer{
+                 font-size: 11px;
+                padding-left: 15%;
+                
+              }
+
+}
+
+@media screen and (max-width:360px){
+
+
+
+        
+        .contact{
+
+            
+                padding-top: 4rem;
+        }
+        
+        .contact p{
+                
+                font-size: 26px;
+                margin-bottom: 25%;
+                word-spacing: 8px;
+            
+                
+        
+        }
+       
+             
+          
+             
+            
+             
+        
+        .contact a{
+               
+                font-size: 15px;
+        
+                margin-top: 28px;
+                margin-left: 18%;
+                padding: 16px;
+              
+        
+        }
+        .contacts {
+                padding: 3px 3px;
+                padding-left: 8%;
+                font-size: 0.8px;
+                font-weight: 200;
+        
+        
+        }
+        .contacts a{
+                padding: 0.5px 0.5px ;
+                margin: 0.5px 0.5px;
+                font-size: 20px;
+                font-weight: 100;
+               
+              
+        }
+
+        .contacts .gmail { 
+
+                     margin-left: 50%;
+
+        }
+        .contacts #gma{
+                margin-left: 32%;
+                margin-top: 15px;
+        }
+                
+               
+        .contacts a i{
+                margin: 7px;
+        }
+
+
+        footer{
+                 font-size: 11px;
+                padding-left: 15%;
+                
+              }
+
+}
